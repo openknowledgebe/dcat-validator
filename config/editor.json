@@ -1,0 +1,23 @@
+{
+    "header": "DCAT-AP editor for öppnadata.se",
+    "bundles": [
+        "../libs/rdforms/templates/dcterms.json",
+        "../libs/rdforms/templates/odrs.json",
+        "../libs/rdforms/templates/foaf.json",
+        "../libs/rdforms/templates/vcard.json",
+        "../templates/dcat-ap.json"
+    ],
+    "namespaces": {
+        "dcat": "http://www.w3.org/ns/dcat#",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "adms": "http://www.w3.org/ns/adms#",
+        "vcard": "http://www.w3.org/2006/vcard/ns#",
+        "schema": "http://schema.org/"
+    },
+    "mainType": "http://www.w3.org/ns/dcat#Catalog",
+    "type2template": {
+        "http://www.w3.org/ns/dcat#Catalog": "dcat:Catalog",
+        "http://www.w3.org/ns/dcat#Dataset": "dcat:Dataset",
+        "http://www.w3.org/ns/dcat#Distribution": "dcat:Distribution"
+    }
+}

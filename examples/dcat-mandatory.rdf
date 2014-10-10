@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:dcat="http://www.w3.org/ns/dcat#"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/">
+  <rdf:Description rdf:about="http://nobelprize.org/datasets/dcat#catalog">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+    <dcterms:title>Nobel Media Dataset catalog</dcterms:title>
+    <dcterms:description>A range of datasets maintained by Nobel Media AB</dcterms:description>
+    <dcterms:publisher rdf:nodeID="_3"/>
+    <dcat:dataset rdf:resource="http://nobelprize.org/datasets/dcat#lkjb"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="_3">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <foaf:name>Nobel Media AB</foaf:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://nobelprize.org/datasets/dcat#lkjb">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <dcterms:title xml:lang="en">Linked Nobel prizes</dcterms:title>
+    <dcterms:description xml:lang="en">This dataset contains Nobel prizes, Nobel laureates and information about related media resources.</dcterms:description>
+  </rdf:Description>
+</rdf:RDF>

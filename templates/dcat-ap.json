@@ -1,0 +1,4504 @@
+{
+  "templates": [
+    {
+      "type": "group",
+      "id": "dcat:Dataset",
+      "label": {
+        "en": "Dataset"
+      },
+      "constraints": {
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/ns/dcat#Dataset"
+      },
+      "items": [
+        {
+          "type": "text",
+          "nodetype": "LANGUAGE_LITERAL",
+          "extends": "dcterms:title",
+          "description": {
+            "en": "This property contains a name given to the\ndataset. This property can be repeated for\nparallel language versions of the name."
+          },
+          "cardinality": {
+            "min": 1,
+            "pref": 0
+          }
+        },
+        {
+          "type": "text",
+          "nodetype": "LANGUAGE_LITERAL",
+          "extends": "dcterms:description",
+          "description": {
+            "en": "This property contains a free-text description \nof the dataset. \nThis property can be repeated for parallel \nlanguage versions of the description."
+          },
+          "cardinality": {
+            "min": 1,
+            "pref": 0
+          }
+        },
+        {
+          "type": "group",
+          "nodetype": "RESOURCE",
+          "property": "http://purl.org/dc/terms/publisher",
+          "extends": "dcat:foaf:Agent",
+          "label": {
+            "en": "Publisher"
+          },
+          "description": {
+            "en": "This property refers to an entity (organisation)\nresponsible for making the Dataset available."
+          },
+          "cardinality": {
+            "min": 0,
+            "pref": 1,
+            "max": 1
+          }
+        },
+        {
+          "id": "dcat:adms:contactPoint"
+        },
+        {
+          "id": "dcat:keyword"
+        },
+        {
+          "type": "choice",
+          "nodetype": "URI",
+          "property": "http://www.w3.org/ns/dcat#theme",
+          "label": {
+            "en": "Theme / category"
+          },
+          "description": {
+            "en": "This property refers to a category of the Dataset. \nA Dataset may be associated with multiple themes."
+          },
+          "choices": [
+            {
+              "value": "http://eurovoc.europa.eu/100142",
+              "label": {
+                "en": "04 POLITICS",
+                "sv": "04 POLITIK"
+              }
+            },
+            {
+              "value": "http://eurovoc.europa.eu/100143",
+              "label": {
+                "en": "08 INTERNATIONAL RELATIONS",
+                "sv": "08 INTERNATIONELLA FÖRBINDELSER"
+              },
+              "description": {}
+            },
+            {
+              "value": "http://eurovoc.europa.eu/100144",
+              "label": {
+                "en": "10 EUROPEAN UNION",
+                "sv": "10 EUROPEISKA UNIONEN"
+              }
+            },
+            {
+              "value": "http://eurovoc.europa.eu/100145",
+              "label": {
+                "en": "12 LAW",
+                "sv": "12 LAG OCH RÄTT"
+              }
+            },
+            {
+              "value": "http://eurovoc.europa.eu/100146",
+              "label": {
+                "en": "16 ECONOMICS",
+                "sv": "16 EKONOMI"
+              }
+            },
+            {
+              "value": "http://eurovoc.europa.eu/100147",
+              "label": {
+                "en": "20 TRADE",
+                "sv": "20 HANDEL OCH AFFÄRSVERKSAMHET"
+              }
+            },
+            {
+              "value": "http://eurovoc.europa.eu/100148",
+              "label": {
+                "en": "24 FINANCE",
+                "sv": "24 FINANSER"
+              }
+            },
+            {
+              "value": "http://eurovoc.europa.eu/100149",
+              "label": {
+                "en": "28 SOCIAL QUESTIONS",
+                "sv": "28 SOCIALA FRÅGOR"
+              }
+            },
+            {
+              "value": "http://eurovoc.europa.eu/100150",
+              "label": {
+                "en": "32 EDUCATION AND COMMUNICATIONS",
+                "sv": "32 UTBILDNING OCH KOMMUNIKATION"
+              }
+            },
+            {
+              "value": "http://eurovoc.europa.eu/100151",
+              "label": {
+                "en": "36 SCIENCE",
+                "sv": "36 VETENSKAP"
+              }
+            },
+            {
+              "value": "http://eurovoc.europa.eu/100152",
+              "label": {
+                "en": "40 BUSINESS AND COMPETITION",
+                "sv": "40 FÖRETAG OCH KONKURRENS"
+              }
+            },
+            {
+              "value": "http://eurovoc.europa.eu/100153",
+              "label": {
+                "en": "44 EMPLOYMENT AND WORKING CONDITIONS",
+                "sv": "44 SYSSELSÄTTNING OCH ARBETE"
+              }
+            },
+            {
+              "value": "http://eurovoc.europa.eu/100154",
+              "label": {
+                "en": "48 TRANSPORT",
+                "sv": "48 TRANSPORT"
+              }
+            },
+            {
+              "value": "http://eurovoc.europa.eu/100155",
+              "label": {
+                "en": "52 ENVIRONMENT",
+                "sv": "52 MILJÖ"
+              }
+            },
+            {
+              "value": "http://eurovoc.europa.eu/100156",
+              "label": {
+                "en": "56 AGRICULTURE, FORESTRY AND FISHERIES",
+                "sv": "56 JORDBRUK, SKOGSBRUK OCH FISKE"
+              }
+            },
+            {
+              "value": "http://eurovoc.europa.eu/100157",
+              "label": {
+                "en": "60 AGRI-FOODSTUFFS",
+                "sv": "60 JORDBRUKSLIVSMEDELSINDUSTRI"
+              }
+            },
+            {
+              "value": "http://eurovoc.europa.eu/100158",
+              "label": {
+                "en": "64 PRODUCTION, TECHNOLOGY AND RESEARCH",
+                "sv": "64 PRODUKTION, TEKNIK OCH FORSKNING"
+              }
+            },
+            {
+              "value": "http://eurovoc.europa.eu/100159",
+              "label": {
+                "en": "66 ENERGY",
+                "sv": "66 ENERGI"
+              }
+            },
+            {
+              "value": "http://eurovoc.europa.eu/100160",
+              "label": {
+                "en": "68 INDUSTRY",
+                "sv": "68 INDUSTRI"
+              }
+            },
+            {
+              "value": "http://eurovoc.europa.eu/100161",
+              "label": {
+                "en": "72 GEOGRAPHY",
+                "sv": "72 GEOGRAFI"
+              }
+            },
+            {
+              "value": "http://eurovoc.europa.eu/100162",
+              "label": {
+                "en": "76 INTERNATIONAL ORGANISATIONS",
+                "sv": "76 INTERNATIONELLA ORGANISATIONER"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "extends": "dcat:Distribution",
+          "property": "http://www.w3.org/ns/dcat#distribution",
+          "label": {
+            "en": "Distribution"
+          },
+          "content": [],
+          "cardinality": {
+            "min": 0,
+            "pref": 1
+          },
+          "description": {
+            "en": "This property links the Dataset to an available Distribution."
+          },
+          "nodetype": "URI"
+        },
+        {
+          "id": "dcat:dcterms:identifier"
+        },
+        {
+          "id": "dcat:adms:identifier"
+        },
+        {
+          "type": "text",
+          "nodetype": "LITERAL",
+          "extends": "dcterms:issued",
+          "description": {
+            "en": "This property contains the date of formal\nissuance (e.g., publication) of the Dataset."
+          },
+          "label": {
+            "en": "Release date"
+          },
+          "cardinality": {
+            "min": 0,
+            "pref": 0,
+            "max": 1
+          }
+        },
+        {
+          "type": "text",
+          "nodetype": "LITERAL",
+          "extends": "dcterms:modified",
+          "label": {
+            "en": "Modification date"
+          },
+          "description": {
+            "en": "This property contains the most recent date on which the Dataset was changed or modified."
+          },
+          "cardinality": {
+            "min": 0,
+            "pref": 0,
+            "max": 1
+          }
+        },
+        {
+          "id": "dcat:dcterms:language"
+        },
+        {
+          "id": "dcat:landingPage"
+        },
+        {
+          "id": "dcat:dcterms:conformsTo"
+        },
+        {
+          "id": "dcat:dcterms:spatial"
+        },
+        {
+          "id": "dcat:dcterms:temporal"
+        },
+        {
+          "id": "dcat:dcterms:accrualPeriodicity"
+        },
+        {
+          "id": "dcat:adms:version"
+        },
+        {
+          "id": "dcat:adms:versionNotes"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "dcat:dcterms:title",
+      "extends": "dcterms:title",
+      "cardinality": {
+        "min": 1,
+        "pref": 0
+      },
+      "description": {
+        "en": "This property contains a name given to the\nDataset. This property can be repeated for\nparallel language versions of the name."
+      }
+    },
+    {
+      "type": "text",
+      "id": "dcat:dcterms:description",
+      "extends": "dcterms:description",
+      "styles": [
+        "multiline"
+      ],
+      "cardinality": {
+        "min": 1,
+        "pref": 0
+      },
+      "description": {
+        "en": "This property contains a free-text description \nof the dataset. \nThis property can be repeated for parallel \nlanguage versions of the description."
+      }
+    },
+    {
+      "type": "text",
+      "id": "dcat:dcterms:identifier",
+      "extends": "dcterms:identifier",
+      "cardinality": {
+        "min": 0,
+        "pref": 0
+      },
+      "description": {
+        "en": "This property contains the main identifier\nfor the Dataset, e.g. the URI or other\nunique identifier in the context of the\nCatalogue."
+      }
+    },
+    {
+      "type": "choice",
+      "id": "dcat:dcterms:language",
+      "extends": "dcterms:language",
+      "cardinality": {
+        "min": 0,
+        "pref": 0
+      },
+      "choices": [
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/SQI",
+          "label": {
+            "en": "Albanian",
+            "sv": "albanska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/ARA",
+          "label": {
+            "en": "Arabic",
+            "sv": "arabiska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/HYE",
+          "label": {
+            "en": "Armenian",
+            "sv": "armeniska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/AZE",
+          "label": {
+            "en": "Azerbaijani",
+            "sv": "azerbajdzjanska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/EUS",
+          "label": {
+            "en": "Basque",
+            "sv": "baskiska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/BEL",
+          "label": {
+            "en": "Belarusian",
+            "sv": "vitryska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/BEN",
+          "label": {
+            "en": "Bengali",
+            "sv": "bengali"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/BOS",
+          "label": {
+            "en": "Bosnian",
+            "sv": "bosniska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/BRE",
+          "label": {
+            "en": "Breton",
+            "sv": "bretonska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/BUL",
+          "label": {
+            "en": "Bulgarian",
+            "sv": "bulgariska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/CAT",
+          "label": {
+            "en": "Catalan",
+            "sv": "katalanska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/ZHO",
+          "label": {
+            "en": "Chinese",
+            "sv": "kinesiska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/COS",
+          "label": {
+            "en": "Corsican",
+            "sv": "korsikanska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/HRV",
+          "label": {
+            "en": "Croatian",
+            "sv": "kroatiska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/CES",
+          "label": {
+            "en": "Czech",
+            "sv": "tjeckiska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/DAN",
+          "label": {
+            "en": "Danish",
+            "sv": "danska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/DIV",
+          "label": {
+            "en": "Dhivehi",
+            "sv": "divehi"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/NLD",
+          "label": {
+            "en": "Dutch",
+            "sv": "nederländska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/ENG",
+          "label": {
+            "en": "English",
+            "sv": "engelska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/EPO",
+          "label": {
+            "en": "Esperanto",
+            "sv": "esperanto"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/EST",
+          "label": {
+            "en": "Estonian",
+            "sv": "estniska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/FAO",
+          "label": {
+            "en": "Faroese",
+            "sv": "färöiska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/FIN",
+          "label": {
+            "en": "Finnish",
+            "sv": "finska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/VLS",
+          "label": {
+            "en": "Flemish",
+            "sv": "Flamländska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/FRA",
+          "label": {
+            "en": "French",
+            "sv": "franska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/FRY",
+          "label": {
+            "en": "Frisian",
+            "sv": "frisiska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/GLG",
+          "label": {
+            "en": "Galician",
+            "sv": "galiciska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/KAT",
+          "label": {
+            "en": "Georgian",
+            "sv": "georgiska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/DEU",
+          "label": {
+            "en": "German",
+            "sv": "tyska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/ELL",
+          "label": {
+            "en": "Greek",
+            "sv": "grekiska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/KAL",
+          "label": {
+            "en": "Greenlandic",
+            "sv": "grönländska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/HEB",
+          "label": {
+            "en": "Hebrew",
+            "sv": "hebreiska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/HIN",
+          "label": {
+            "en": "Hindi",
+            "sv": "hindi"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/HUN",
+          "label": {
+            "en": "Hungarian",
+            "sv": "ungerska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/ISL",
+          "label": {
+            "en": "Icelandic",
+            "sv": "isländska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/IND",
+          "label": {
+            "en": "Indonesian",
+            "sv": "indonesiska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/INA",
+          "label": {
+            "en": "Interlingua",
+            "sv": "interlingua"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/GLE",
+          "label": {
+            "en": "Irish",
+            "sv": "iriska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/ITA",
+          "label": {
+            "en": "Italian",
+            "sv": "italienska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/JPN",
+          "label": {
+            "en": "Japanese",
+            "sv": "japanska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/CSB",
+          "label": {
+            "en": "Kashubian",
+            "sv": "kasjubiska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/KAZ",
+          "label": {
+            "en": "Kazakh",
+            "sv": "kazakiska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/KHM",
+          "label": {
+            "en": "Khmer",
+            "sv": "khmer"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/KOR",
+          "label": {
+            "en": "Korean",
+            "sv": "koreanska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/KUR",
+          "label": {
+            "en": "Kurdish",
+            "sv": "kurdiska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/KIR",
+          "label": {
+            "en": "Kyrgyz",
+            "sv": "kirgiziska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/LAO",
+          "label": {
+            "en": "Lao",
+            "sv": "lao"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/LAT",
+          "label": {
+            "en": "Latin",
+            "sv": "latin"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/LAV",
+          "label": {
+            "en": "Latvian",
+            "sv": "lettiska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/LIT",
+          "label": {
+            "en": "Lithuanian",
+            "sv": "litauiska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/LTZ",
+          "label": {
+            "en": "Luxembourgish",
+            "sv": "luxemburgiska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/MKD",
+          "label": {
+            "en": "Macedonian",
+            "sv": "makedonska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/MLG",
+          "label": {
+            "en": "Malagasy",
+            "sv": "malagassiska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/MSA",
+          "label": {
+            "en": "Malay",
+            "sv": "malajiska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/MLT",
+          "label": {
+            "en": "Maltese",
+            "sv": "maltesiska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/MIN",
+          "label": {
+            "en": "Minangkabau",
+            "sv": "minangkabau"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/MOL",
+          "label": {
+            "en": "Moldavian",
+            "sv": "moldaviska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/MON",
+          "label": {
+            "en": "Mongolian",
+            "sv": "mongoliska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/0E0",
+          "label": {
+            "en": "Montenegrin",
+            "sv": "montenegrinska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/NEP",
+          "label": {
+            "en": "Nepali",
+            "sv": "nepali"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/SME",
+          "label": {
+            "en": "Northern Sami",
+            "sv": "nordsamiska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/NOR",
+          "label": {
+            "en": "Norwegian",
+            "sv": "norska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/OCI",
+          "label": {
+            "en": "Occitan",
+            "sv": "occitanska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/OSS",
+          "label": {
+            "en": "Ossetian",
+            "sv": "ossetiska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/FAS",
+          "label": {
+            "en": "Persian",
+            "sv": "persiska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/POL",
+          "label": {
+            "en": "Polish",
+            "sv": "polska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/POR",
+          "label": {
+            "en": "Portuguese",
+            "sv": "portugisiska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/OP_DATPRO",
+          "label": {
+            "en": "Provisional data",
+            "sv": "Tillfälliga uppgifter"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/ROM",
+          "label": {
+            "en": "Romani",
+            "sv": "romani"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/RON",
+          "label": {
+            "en": "Romanian",
+            "sv": "rumänska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/ROH",
+          "label": {
+            "en": "Romansh",
+            "sv": "rätoromanska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/RUS",
+          "label": {
+            "en": "Russian",
+            "sv": "ryska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/GLA",
+          "label": {
+            "en": "Scottish Gaelic",
+            "sv": "skotsk gaeliska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/SRP",
+          "label": {
+            "en": "Serbian",
+            "sv": "serbiska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/HBS",
+          "label": {
+            "en": "Serbo-Croatian",
+            "sv": "serbokroatiska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/SIN",
+          "label": {
+            "en": "Sinhala",
+            "sv": "singalesiska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/SLK",
+          "label": {
+            "en": "Slovak",
+            "sv": "slovakiska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/SLV",
+          "label": {
+            "en": "Slovenian",
+            "sv": "slovenska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/SPA",
+          "label": {
+            "en": "Spanish",
+            "sv": "spanska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/SWA",
+          "label": {
+            "en": "Swahili",
+            "sv": "swahili"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/SWE",
+          "label": {
+            "en": "Swedish",
+            "sv": "svenska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/TGK",
+          "label": {
+            "en": "Tajiks",
+            "sv": "tadzjikiska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/TAM",
+          "label": {
+            "en": "Tamil",
+            "sv": "tamil"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/THA",
+          "label": {
+            "en": "Thai",
+            "sv": "thai"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/BOD",
+          "label": {
+            "en": "Tibetan",
+            "sv": "tibetanska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/TUR",
+          "label": {
+            "en": "Turkish",
+            "sv": "turkiska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/TUK",
+          "label": {
+            "en": "Turkmen",
+            "sv": "turkmeniska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/UKR",
+          "label": {
+            "en": "Ukrainian",
+            "sv": "ukrainska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/URD",
+          "label": {
+            "en": "Urdu",
+            "sv": "urdu"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/UZB",
+          "label": {
+            "en": "Uzbek",
+            "sv": "uzbekiska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/0D0",
+          "label": {
+            "en": "Valencian",
+            "sv": "valencianska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/VIE",
+          "label": {
+            "en": "Vietnamese",
+            "sv": "vietnamesiska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/WLN",
+          "label": {
+            "en": "Walloon",
+            "sv": "vallonska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/CYM",
+          "label": {
+            "en": "Welsh",
+            "sv": "kymriska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/YID",
+          "label": {
+            "en": "Yiddish",
+            "sv": "jiddisch"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/ZUL",
+          "label": {
+            "en": "Zulu",
+            "sv": "zulu"
+          }
+        }
+      ],
+      "description": {
+        "en": "This property refers to a language of the Dataset. \nThis property can be repeated if there are \nmultiple languages in the Dataset."
+      }
+    },
+    {
+      "type": "choice",
+      "id": "dcat:dcterms:accrualPeriodicity",
+      "label": {
+        "en": "Frequency of update"
+      },
+      "choices": [
+        {
+          "value": "http://purl.org/cld/freq/annual",
+          "label": {
+            "en": "Annual"
+          },
+          "description": {
+            "en": "The event occurs once a year."
+          }
+        },
+        {
+          "value": "http://purl.org/cld/freq/biennial",
+          "label": {
+            "en": "Biennial"
+          },
+          "description": {
+            "en": "The event occurs every two years."
+          }
+        },
+        {
+          "value": "http://purl.org/cld/freq/bimonthly",
+          "label": {
+            "en": "Bimonthly"
+          },
+          "description": {
+            "en": "The event occurs every two months."
+          }
+        },
+        {
+          "value": "http://purl.org/cld/freq/biweekly",
+          "label": {
+            "en": "Biweekly"
+          },
+          "description": {
+            "en": "The event occurs every two weeks."
+          }
+        },
+        {
+          "value": "http://purl.org/cld/freq/continuous",
+          "label": {
+            "en": "Continuous"
+          },
+          "description": {
+            "en": "The event repeats without interruption."
+          }
+        },
+        {
+          "value": "http://purl.org/cld/freq/daily",
+          "label": {
+            "en": "Daily"
+          },
+          "description": {
+            "en": "The event occurs once a day."
+          }
+        },
+        {
+          "value": "http://purl.org/cld/freq/irregular",
+          "label": {
+            "en": "Irregular"
+          },
+          "description": {
+            "en": "The event occurs at uneven intervals."
+          }
+        },
+        {
+          "value": "http://purl.org/cld/freq/monthly",
+          "label": {
+            "en": "Monthly"
+          },
+          "description": {
+            "en": "The event occurs once a month."
+          }
+        },
+        {
+          "value": "http://purl.org/cld/freq/quarterly",
+          "label": {
+            "en": "Quarterly"
+          },
+          "description": {
+            "en": "The event occurs every three months."
+          }
+        },
+        {
+          "value": "http://purl.org/cld/freq/semiannual",
+          "label": {
+            "en": "Semiannual"
+          },
+          "description": {
+            "en": "The event occurs twice a year."
+          }
+        },
+        {
+          "value": "http://purl.org/cld/freq/semimonthly",
+          "label": {
+            "en": "Semimonthly"
+          },
+          "description": {
+            "en": "The event occurs twice a month."
+          }
+        },
+        {
+          "value": "http://purl.org/cld/freq/semiweekly",
+          "label": {
+            "en": "Semiweekly"
+          },
+          "description": {
+            "en": "The event occurs twice a week."
+          }
+        },
+        {
+          "value": "http://purl.org/cld/freq/threeTimesAMonth",
+          "label": {
+            "en": "Three times a month"
+          },
+          "description": {
+            "en": "The event occurs three times a month."
+          }
+        },
+        {
+          "value": "http://purl.org/cld/freq/threeTimesAWeek",
+          "label": {
+            "en": "Three times a week"
+          },
+          "description": {
+            "en": "The event occurs three times a week."
+          }
+        },
+        {
+          "value": "http://purl.org/cld/freq/threeTimesAYear",
+          "label": {
+            "en": "Three times a year"
+          },
+          "description": {
+            "en": "The event occurs three times a year."
+          }
+        },
+        {
+          "value": "http://purl.org/cld/freq/triennial",
+          "label": {
+            "en": "Triennial"
+          },
+          "description": {
+            "en": "The event occurs every three years."
+          }
+        },
+        {
+          "value": "http://purl.org/cld/freq/weekly",
+          "label": {
+            "en": "Weekly"
+          },
+          "description": {
+            "en": "The event occurs once a week."
+          }
+        }
+      ],
+      "nodetype": "URI",
+      "property": "http://purl.org/dc/terms/accrualPeriodicity",
+      "description": {
+        "en": "This property refers to the frequency at\nwhich Dataset is updated."
+      },
+      "cardinality": {
+        "min": 0,
+        "pref": 0,
+        "max": 1
+      }
+    },
+    {
+      "type": "group",
+      "id": "dcat:dcterms:temporal",
+      "property": "http://purl.org/dc/terms/temporal",
+      "nodetype": "RESOURCE",
+      "label": {
+        "en": "Time period"
+      },
+      "constraints": {
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://purl.org/dc/terms/PeriodOfTime"
+      },
+      "cardinality": {
+        "min": 0,
+        "pref": 0
+      },
+      "items": [
+        {
+          "type": "text",
+          "nodetype": "DATATYPE_LITERAL",
+          "property": "http://schema.org/startDate",
+          "label": {
+            "en": "Start"
+          },
+          "datatype": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        {
+          "type": "text",
+          "nodetype": "DATATYPE_LITERAL",
+          "property": "http://schema.org/endDate",
+          "label": {
+            "en": "End"
+          },
+          "datatype": "http://www.w3.org/2001/XMLSchema#date"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "dcat:keyword",
+      "nodetype": "ONLY_LITERAL",
+      "label": {
+        "en": "Keyword / tag"
+      },
+      "property": "http://www.w3.org/ns/dcat#keyword",
+      "cardinality": {
+        "min": 0,
+        "pref": 1
+      },
+      "description": {
+        "en": "This property contains a keyword or tag \ndescribing the Dataset."
+      }
+    },
+    {
+      "type": "group",
+      "nodetype": "RESOURCE",
+      "label": {
+        "en": "Contact point"
+      },
+      "id": "dcat:adms:contactPoint",
+      "property": "http://www.w3.org/ns/adms#contactPoint",
+      "cardinality": {
+        "min": 0,
+        "pref": 1
+      },
+      "description": {
+        "en": "This property contains contact information\nthat can be used for flagging errors in the\nDataset or sending comments"
+      },
+      "extends": "vc:IndOrGroup"
+    },
+    {
+      "type": "text",
+      "nodetype": "URI",
+      "label": {
+        "en": "Landing page"
+      },
+      "property": "http://www.w3.org/ns/dcat#landingPage",
+      "id": "dcat:landingPage",
+      "cardinality": {
+        "min": 0,
+        "pref": 0,
+        "max": 1
+      },
+      "description": {
+        "en": "This property refers to a web page that provides \naccess to the Dataset, its Distributions and/or \nadditional information."
+      }
+    },
+    {
+      "type": "group",
+      "id": "dcat:publisher-person",
+      "extends": "foaf:Person-ref",
+      "property": "http://purl.org/dc/terms/publisher",
+      "label": {
+        "en": "Publisher (person)"
+      },
+      "cardinality": {
+        "min": 0,
+        "pref": 1
+      }
+    },
+    {
+      "type": "text",
+      "id": "dcat:theme",
+      "property": "http://www.w3.org/ns/dcat#theme",
+      "nodetype": "URI",
+      "label": {
+        "en": "Theme / category"
+      },
+      "cardinality": {
+        "min": 0,
+        "pref": 1
+      },
+      "description": {
+        "en": "This property refers to a category of the Dataset. \nA Dataset may be associated with multiple themes."
+      }
+    },
+    {
+      "type": "group",
+      "id": "dcat:Distribution",
+      "constraints": {
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/ns/dcat#Distribution"
+      },
+      "label": {},
+      "styles": [],
+      "items": [
+        {
+          "type": "text",
+          "nodetype": "LANGUAGE_LITERAL",
+          "extends": "dcterms:title",
+          "description": {
+            "en": "This property contains a name given to the\ndistribution. This property can be repeated for\nparallel language versions of the name."
+          },
+          "cardinality": {
+            "min": 0,
+            "pref": 0
+          }
+        },
+        {
+          "type": "text",
+          "nodetype": "LANGUAGE_LITERAL",
+          "extends": "dcterms:description",
+          "description": {
+            "en": "This property contains a free-text description \nof the distribution. \nThis property can be repeated for parallel \nlanguage versions of the description."
+          },
+          "cardinality": {
+            "min": 0,
+            "pref": 1
+          }
+        },
+        {
+          "id": "dcat:accessURL"
+        },
+        {
+          "type": "text",
+          "nodetype": "LITERAL",
+          "extends": "dcterms:issued",
+          "description": {
+            "": "This property contains the date of formal\nissuance (e.g., publication) of the Distribution."
+          },
+          "cardinality": {
+            "min": 0,
+            "pref": 0,
+            "max": 1
+          },
+          "label": {
+            "en": "Release date"
+          }
+        },
+        {
+          "type": "text",
+          "nodetype": "LITERAL",
+          "extends": "dcterms:modified",
+          "label": {
+            "en": "Modification date"
+          },
+          "description": {
+            "en": "This property contains the most recent date on which the Distribution was changed or modified."
+          },
+          "cardinality": {
+            "min": 0,
+            "pref": 0,
+            "max": 1
+          }
+        },
+        {
+          "type": "group",
+          "nodetype": "URI",
+          "extends": "dcat:dcterms:license",
+          "cardinality": {
+            "min": 0,
+            "pref": 1
+          }
+        },
+        {
+          "id": "dcat:dcterms:rights"
+        },
+        {
+          "id": "dcat:downloadURL"
+        },
+        {
+          "id": "dcat:format-group"
+        },
+        {
+          "id": "dcat:byteSize"
+        },
+        {
+          "id": "dcat:adms:status"
+        }
+      ],
+      "cardinality": {
+        "min": 0,
+        "pref": 0
+      },
+      "description": {},
+      "nodetype": "URI"
+    },
+    {
+      "type": "group",
+      "id": "dcat:format-group",
+      "label": {
+        "": "Format"
+      },
+      "cardinality": {
+        "min": 0,
+        "pref": 1
+      },
+      "items": [
+        {
+          "type": "choice",
+          "property": "http://purl.org/dc/terms/format",
+          "nodetype": "ONLY_LITERAL",
+          "label": {
+            "en": "common mediatypes"
+          },
+          "choices": [
+            {
+              "value": "text/csv",
+              "label": {
+                "en": "Comma Separated Values (.csv)"
+              },
+              "description": {
+                "en": "CSV is a simple spreadsheet format where rows are separeted by newlines and columns by commas , semicolon or some other special character."
+              }
+            },
+            {
+              "value": "application/x-shp",
+              "label": {
+                "en": "ESRI Shapefile (.shp)"
+              },
+              "description": {
+                "en": "ESRI Shapefile developed by ESRI for ArcMap which is a multi-file GIS format that uses DBase files for the attribution and a prf file for the coordinate system. "
+              }
+            },
+            {
+              "value": "application/gml+xml",
+              "label": {
+                "en": "GML (.gml)"
+              },
+              "description": {
+                "en": "Geography Markup Language (GML) is an international standard for exchange of geographical feature maintained by the Open Geospatial Consortium (OGC)."
+              }
+            },
+            {
+              "value": "text/html",
+              "label": {
+                "en": "HTML (.html)"
+              },
+              "description": {
+                "en": "HTML or HyperText Markup Language is the standard markup language used to create web pages."
+              }
+            },
+            {
+              "value": "application/json",
+              "label": {
+                "en": "JSON (.json)"
+              },
+              "description": {
+                "en": "JSON or JavaScript Object Notation, is an open standard format that uses human-readable text to transmit data objects consisting of attribute–value pairs. It is used primarily to transmit data between a server and web application, as an alternative to XML."
+              }
+            },
+            {
+              "value": "application/vnd.google-earth.kml+xml",
+              "label": {
+                "en": "KML (.kml)"
+              },
+              "description": {
+                "en": "Keyhole Markup Language (KML) is used to display geographic data in an Earth browser, such as Google Earth. KML is an international standard maintained by the Open Geospatial Consortium, Inc. (OGC)."
+              }
+            },
+            {
+              "value": "application/vnd.ms-excel",
+              "label": {
+                "": "Microsoft Excel (.xls)"
+              },
+              "description": {}
+            },
+            {
+              "value": "application/n-triples",
+              "label": {
+                "en": "N-Triples (.n3)"
+              },
+              "description": {
+                "en": "A line-based syntax for an RDF graph."
+              }
+            },
+            {
+              "value": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet ",
+              "label": {
+                "en": "OOXML Spreadsheet (.xlsx)"
+              },
+              "description": {
+                "en": "Office Open XML Spreadsheet is a zipped, XML-based file format developed by Microsoft, standardized in ECMA-376 and later in ISO/IEC 29500."
+              }
+            },
+            {
+              "value": "application/vnd.oasis.opendocument.spreadsheet",
+              "label": {
+                "en": "OpenDocument Spreadsheet (.ods)"
+              },
+              "description": {
+                "en": "The Open Document Format for spreadsheets is an XML based format standardized first by OASIS and later by ISO/IEC: ISO/IEC 26300:2006/Amd 1:2012 — Open Document Format for Office Applications (OpenDocument) v1.1."
+              }
+            },
+            {
+              "value": "application/pdf",
+              "description": {
+                "en": "Portable Document Format (PDF) is a file format used to present documents encapsulating a complete description of a fixed-layout flat document, including the text, fonts, graphics, and other information needed to display it."
+              },
+              "label": {
+                "en": "PDF (.pdf)"
+              }
+            },
+            {
+              "value": "application/rdf+xml",
+              "label": {
+                "en": "RDF/XML (.rdf)"
+              },
+              "description": {
+                "en": "This is an XML syntax for RDF as introduced in the RDF/XML Syntax Specification by W3C in 2004."
+              }
+            },
+            {
+              "value": "application/sparql-query",
+              "label": {
+                "en": "SPARQL Query Language for RDF (API)"
+              },
+              "description": {
+                "en": "SPARQL (pronounced \"sparkle\", an acronym for SPARQL Protocol and RDF Query Language) is an RDF query language, that is, a query language for databases, able to retrieve and manipulate data stored in Resource Description Framework format."
+              }
+            },
+            {
+              "value": "text/plain",
+              "label": {
+                "en": "Text (.txt)"
+              },
+              "description": {
+                "en": "Plain text file."
+              }
+            },
+            {
+              "value": "text/turtle; charset=utf-8",
+              "description": {
+                "": "Turtle is a syntax for RDF that allows an RDF graph to be completely written in a compact and natural text form, with abbreviations for common usage patterns and datatypes. "
+              },
+              "label": {
+                "": "Turtle (.ttl)"
+              }
+            },
+            {
+              "value": "application/xml",
+              "label": {
+                "en": "XML data (.xml)"
+              },
+              "description": {
+                "en": "Extensible Markup Language (XML) is a markup language that defines a set of rules for encoding documents in a format that is both human-readable and machine-readable. It is defined in the XML 1.0 Specification produced by the W3C."
+              }
+            },
+            {
+              "value": "application/zip",
+              "label": {
+                "en": "ZIP (.zip)"
+              },
+              "description": {
+                "en": ".ZIP is an archive file format that supports lossless data compression."
+              }
+            }
+          ],
+          "cardinality": {
+            "min": 0,
+            "pref": 1
+          },
+          "description": {
+            "en": "Media types are maintained by IANA, see list at http://www.iana.org/assignments/media-types/media-types.xhtml."
+          }
+        },
+        {
+          "type": "text",
+          "property": "http://purl.org/dc/terms/format",
+          "description": {
+            "en": "Media types are maintained by IANA, see list at http://www.iana.org/assignments/media-types/media-types.xhtml."
+          },
+          "label": {
+            "en": "other mediatypes"
+          },
+          "nodetype": "ONLY_LITERAL",
+          "cardinality": {
+            "min": 0,
+            "pref": 1
+          }
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "dcat:byteSize",
+      "property": "http://www.w3.org/ns/dcat#byteSize",
+      "nodetype": "DATATYPE_LITERAL",
+      "cardinality": {
+        "min": 0,
+        "pref": 0,
+        "max": 1
+      },
+      "label": {
+        "en": "Size (in bytes)"
+      },
+      "description": {
+        "en": "The size in bytes can be approximated when the precise size is not known."
+      },
+      "datatype": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    {
+      "type": "text",
+      "id": "dcat:accessURL",
+      "nodetype": "URI",
+      "label": {
+        "en": "Access URL"
+      },
+      "property": "http://www.w3.org/ns/dcat#accessURL",
+      "description": {
+        "en": "This property contains a URL that gives\naccess to a Distribution of the Dataset.\nThe resource at the access URL may\ncontain information about how to get the\nDataset.\n\n* Use accessURL, and not downloadURL, \n  when it is definitely not a download or \n  when you are not sure whether it is.\n\n* If the distribution(s) are accessible only \n  through a landing page (i.e. direct download \n  URLs are not known), then the landing page \n  link SHOULD be duplicated as accessURL\n  on a distribution."
+      },
+      "cardinality": {
+        "min": 1,
+        "pref": 1
+      }
+    },
+    {
+      "type": "text",
+      "nodetype": "URI",
+      "label": {
+        "en": "Download URL"
+      },
+      "property": "http://www.w3.org/ns/dcat#downloadURL",
+      "description": {
+        "en": "A file that contains the distribution of the dataset in a given format.\ndcat:downloadURL is a specific form of dcat:accessURL. Nevertheless, DCAT does not define dcat:downloadURL as a subproperty of dcat:accessURL not to enforce this entailment as DCAT profiles may wish to impose a stronger separation where they only use accessURL for non-download locations."
+      },
+      "id": "dcat:downloadURL",
+      "cardinality": {
+        "min": 0,
+        "pref": 0,
+        "max": 1
+      }
+    },
+    {
+      "type": "group",
+      "id": "dcat:dcterms:rights",
+      "extends": "odrs:RightsStatement-short",
+      "property": "http://purl.org/dc/terms/rights",
+      "styles": [
+        "expandable"
+      ],
+      "cardinality": {
+        "min": 0,
+        "pref": 0,
+        "max": 1
+      }
+    },
+    {
+      "type": "text",
+      "id": "dcat:dcterms:spatial",
+      "extends": "dcterms:spatial",
+      "nodetype": "URI",
+      "description": {
+        "en": "A spatial region or named place.\nThe geographical area covered by the dataset. It is recommended to use URIs from Geonames in the form: http://sws.geonames.org/6695072"
+      }
+    },
+    {
+      "type": "text",
+      "nodetype": "URI",
+      "id": "dcat:dcterms:conformsTo",
+      "extends": "dcterms:conformsTo",
+      "description": {
+        "en": "This property refers to an implementing\nrule or other specification."
+      }
+    },
+    {
+      "type": "text",
+      "nodetype": "URI",
+      "id": "dcat:adms:identifier",
+      "property": "http://www.w3.org/ns/adms#identifier",
+      "label": {
+        "en": "Other identifier"
+      },
+      "description": {
+        "en": "This property refers to a secondary identifier \nof the Dataset, such as MAST/ADS 48 , \nDataCite 49 , DOI 50 , EZID 51 or W3ID 52 ."
+      }
+    },
+    {
+      "type": "text",
+      "nodetype": "ONLY_LITERAL",
+      "id": "dcat:adms:version",
+      "label": {
+        "en": "Version"
+      },
+      "property": "http://www.w3.org/ns/adms#version",
+      "cardinality": {
+        "min": 0,
+        "pref": 0,
+        "max": 1
+      }
+    },
+    {
+      "type": "text",
+      "nodetype": "LANGUAGE_LITERAL",
+      "id": "dcat:adms:versionNotes",
+      "property": "http://www.w3.org/ns/adms#versionNotes",
+      "styles": [
+        "multiline"
+      ],
+      "label": {
+        "en": "Version notes"
+      }
+    },
+    {
+      "type": "choice",
+      "nodetype": "URI",
+      "id": "dcat:adms:status",
+      "property": "http://www.w3.org/ns/adms#status",
+      "label": {
+        "en": "Status"
+      },
+      "choices": [
+        {
+          "value": "http://purl.org/adms/status/Completed",
+          "label": {
+            "en": "Completed"
+          }
+        },
+        {
+          "value": "http://purl.org/adms/status/Deprecated",
+          "label": {
+            "en": "Deprecated"
+          }
+        },
+        {
+          "value": "http://purl.org/adms/status/UnderDevelopment",
+          "label": {
+            "en": "Under development"
+          }
+        },
+        {
+          "value": "http://purl.org/adms/status/Withdrawn",
+          "label": {
+            "en": "Withdrawn"
+          }
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "nodetype": "RESOURCE",
+      "id": "dcat:Catalog",
+      "constraints": {
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/ns/dcat#Catalog"
+      },
+      "items": [
+        {
+          "type": "text",
+          "nodetype": "LITERAL",
+          "extends": "dcterms:title",
+          "cardinality": {
+            "min": 1,
+            "pref": 0
+          }
+        },
+        {
+          "type": "text",
+          "nodetype": "LITERAL",
+          "extends": "dcterms:description",
+          "cardinality": {
+            "min": 1,
+            "pref": 0
+          }
+        },
+        {
+          "type": "group",
+          "nodetype": "RESOURCE",
+          "cardinality": {
+            "min": 1,
+            "pref": 0,
+            "max": 1
+          },
+          "property": "http://purl.org/dc/terms/publisher",
+          "label": {
+            "en": "Publisher"
+          },
+          "description": {
+            "en": "This property refers to an entity (organisation) responsible for making the Catalogue available."
+          },
+          "extends": "dcat:foaf:Agent"
+        },
+        {
+          "type": "group",
+          "nodetype": "URI",
+          "extends": "dcat:Dataset",
+          "cardinality": {
+            "min": 1,
+            "pref": 0
+          },
+          "property": "http://www.w3.org/ns/dcat#dataset"
+        },
+        {
+          "type": "text",
+          "nodetype": "LITERAL",
+          "extends": "dcterms:issued",
+          "cardinality": {
+            "min": 0,
+            "pref": 1,
+            "max": 1
+          }
+        },
+        {
+          "type": "choice",
+          "nodetype": "URI",
+          "extends": "dcat:dcterms:language",
+          "choices": [
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ab",
+              "label": {
+                "en": "Abkhazian"
+              }
+            },
+            {
+              "Value": "http://id.loc.gov/vocabulary/iso639-1/aa",
+              "label": {
+                "en": "Afar"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/af",
+              "label": {
+                "en": "Afrikaans"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ak",
+              "label": {
+                "en": "Akan"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/sq",
+              "label": {
+                "en": "Albanian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/am",
+              "label": {
+                "en": "Amharic"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ar",
+              "label": {
+                "en": "Arabic"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/an",
+              "label": {
+                "en": "Aragonese"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/hy",
+              "label": {
+                "en": "Armenian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/as",
+              "label": {
+                "en": "Assamese"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/av",
+              "label": {
+                "en": "Avaric"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ae",
+              "label": {
+                "en": "Avestan"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ay",
+              "label": {
+                "en": "Aymara"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/az",
+              "label": {
+                "en": "Azerbaijani"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/bm",
+              "label": {
+                "en": "Bambara"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ba",
+              "label": {
+                "en": "Bashkir"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/eu",
+              "label": {
+                "en": "Basque"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/be",
+              "label": {
+                "en": "Belarusian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/bn",
+              "label": {
+                "en": "Bengali"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/bh",
+              "label": {
+                "en": "Bihari languages"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/bi",
+              "label": {
+                "en": "Bislama"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/nb",
+              "label": {
+                "en": "Bokmål, Norwegian |  Norwegian Bokmål"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/bs",
+              "label": {
+                "en": "Bosnian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/br",
+              "label": {
+                "en": "Breton"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/bg",
+              "label": {
+                "en": "Bulgarian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/my",
+              "label": {
+                "en": "Burmese"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ca",
+              "label": {
+                "en": "Catalan |  Valencian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/km",
+              "label": {
+                "en": "Central Khmer"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ch",
+              "label": {
+                "en": "Chamorro"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ce",
+              "label": {
+                "en": "Chechen"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ny",
+              "label": {
+                "en": "Chichewa |  Chewa |  Nyanja"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/zh",
+              "label": {
+                "en": "Chinese"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/cu",
+              "label": {
+                "en": "Church Slavic |  Old Slavonic |  Church Slavonic |  Old Bulgarian |  Old Church Slavonic"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/cv",
+              "label": {
+                "en": "Chuvash"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/kw",
+              "label": {
+                "en": "Cornish"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/co",
+              "label": {
+                "en": "Corsican"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/cr",
+              "label": {
+                "en": "Cree"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/hr",
+              "label": {
+                "en": "Croatian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/cs",
+              "label": {
+                "en": "Czech"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/da",
+              "label": {
+                "en": "Danish"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/dv",
+              "label": {
+                "en": "Divehi |  Dhivehi |  Maldivian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/nl",
+              "label": {
+                "en": "Dutch |  Flemish"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/dz",
+              "label": {
+                "en": "Dzongkha"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/en",
+              "label": {
+                "en": "English"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/eo",
+              "label": {
+                "en": "Esperanto"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/et",
+              "label": {
+                "en": "Estonian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ee",
+              "label": {
+                "en": "Ewe"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/fo",
+              "label": {
+                "en": "Faroese"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/fj",
+              "label": {
+                "en": "Fijian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/fi",
+              "label": {
+                "en": "Finnish"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/fr",
+              "label": {
+                "en": "French"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ff",
+              "label": {
+                "en": "Fulah"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/gd",
+              "label": {
+                "en": "Gaelic |  Scottish Gaelic"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/gl",
+              "label": {
+                "en": "Galician"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/lg",
+              "label": {
+                "en": "Ganda"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ka",
+              "label": {
+                "en": "Georgian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/de",
+              "label": {
+                "en": "German"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/el",
+              "label": {
+                "en": "Greek, Modern (1453-)"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/gn",
+              "label": {
+                "en": "Guarani"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/gu",
+              "label": {
+                "en": "Gujarati"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ht",
+              "label": {
+                "en": "Haitian |  Haitian Creole"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ha",
+              "label": {
+                "en": "Hausa"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/he",
+              "label": {
+                "en": "Hebrew"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/hz",
+              "label": {
+                "en": "Herero"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/hi",
+              "label": {
+                "en": "Hindi"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ho",
+              "label": {
+                "en": "Hiri Motu"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/hu",
+              "label": {
+                "en": "Hungarian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/is",
+              "label": {
+                "en": "Icelandic"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/io",
+              "label": {
+                "en": "Ido"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ig",
+              "label": {
+                "en": "Igbo"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/id",
+              "label": {
+                "en": "Indonesian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ia",
+              "label": {
+                "en": "Interlingua (International Auxiliary Language Association)"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ie",
+              "label": {
+                "en": "Interlingue |  Occidental"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/iu",
+              "label": {
+                "en": "Inuktitut"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ik",
+              "label": {
+                "en": "Inupiaq"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ga",
+              "label": {
+                "en": "Irish"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/it",
+              "label": {
+                "en": "Italian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ja",
+              "label": {
+                "en": "Japanese"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/jv",
+              "label": {
+                "en": "Javanese"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/kl",
+              "label": {
+                "en": "Kalaallisut |  Greenlandic"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/kn",
+              "label": {
+                "en": "Kannada"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/kr",
+              "label": {
+                "en": "Kanuri"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ks",
+              "label": {
+                "en": "Kashmiri"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/kk",
+              "label": {
+                "en": "Kazakh"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ki",
+              "label": {
+                "en": "Kikuyu |  Gikuyu"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/rw",
+              "label": {
+                "en": "Kinyarwanda"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ky",
+              "label": {
+                "en": "Kirghiz |  Kyrgyz"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/kv",
+              "label": {
+                "en": "Komi"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/kg",
+              "label": {
+                "en": "Kongo"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ko",
+              "label": {
+                "en": "Korean"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/kj",
+              "label": {
+                "en": "Kuanyama |  Kwanyama"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ku",
+              "label": {
+                "en": "Kurdish"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/lo",
+              "label": {
+                "en": "Lao"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/la",
+              "label": {
+                "en": "Latin"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/lv",
+              "label": {
+                "en": "Latvian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/li",
+              "label": {
+                "en": "Limburgan |  Limburger |  Limburgish"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ln",
+              "label": {
+                "en": "Lingala"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/lt",
+              "label": {
+                "en": "Lithuanian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/lu",
+              "label": {
+                "en": "Luba-Katanga"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/lb",
+              "label": {
+                "en": "Luxembourgish |  Letzeburgesch"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/mk",
+              "label": {
+                "en": "Macedonian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/mg",
+              "label": {
+                "en": "Malagasy"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ms",
+              "label": {
+                "en": "Malay"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ml",
+              "label": {
+                "en": "Malayalam"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/mt",
+              "label": {
+                "en": "Maltese"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/gv",
+              "label": {
+                "en": "Manx"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/mi",
+              "label": {
+                "en": "Maori"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/mr",
+              "label": {
+                "en": "Marathi"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/mh",
+              "label": {
+                "en": "Marshallese"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/mn",
+              "label": {
+                "en": "Mongolian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/na",
+              "label": {
+                "en": "Nauru"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/nv",
+              "label": {
+                "en": "Navajo |  Navaho"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/nd",
+              "label": {
+                "en": "Ndebele, North |  North Ndebele"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/nr",
+              "label": {
+                "en": "Ndebele, South |  South Ndebele"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ng",
+              "label": {
+                "en": "Ndonga"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ne",
+              "label": {
+                "en": "Nepali"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/se",
+              "label": {
+                "en": "Northern Sami"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/no",
+              "label": {
+                "en": "Norwegian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/nn",
+              "label": {
+                "en": "Norwegian Nynorsk |  Nynorsk, Norwegian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/oc",
+              "label": {
+                "en": "Occitan (post 1500)"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/oj",
+              "label": {
+                "en": "Ojibwa"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/or",
+              "label": {
+                "en": "Oriya"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/om",
+              "label": {
+                "en": "Oromo"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/os",
+              "label": {
+                "en": "Ossetian |  Ossetic"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/pi",
+              "label": {
+                "en": "Pali"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/pa",
+              "label": {
+                "en": "Panjabi |  Punjabi"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/fa",
+              "label": {
+                "en": "Persian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/pl",
+              "label": {
+                "en": "Polish"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/pt",
+              "label": {
+                "en": "Portuguese"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ps",
+              "label": {
+                "en": "Pushto |  Pashto"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/qu",
+              "label": {
+                "en": "Quechua"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ro",
+              "label": {
+                "en": "Romanian |  Moldavian |  Moldovan"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/rm",
+              "label": {
+                "en": "Romansh"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/rn",
+              "label": {
+                "en": "Rundi"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ru",
+              "label": {
+                "en": "Russian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/sm",
+              "label": {
+                "en": "Samoan"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/sg",
+              "label": {
+                "en": "Sango"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/sa",
+              "label": {
+                "en": "Sanskrit"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/sc",
+              "label": {
+                "en": "Sardinian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/sr",
+              "label": {
+                "en": "Serbian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/sn",
+              "label": {
+                "en": "Shona"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ii",
+              "label": {
+                "en": "Sichuan Yi |  Nuosu"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/sd",
+              "label": {
+                "en": "Sindhi"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/si",
+              "label": {
+                "en": "Sinhala |  Sinhalese"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/sk",
+              "label": {
+                "en": "Slovak"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/sl",
+              "label": {
+                "en": "Slovenian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/so",
+              "label": {
+                "en": "Somali"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/st",
+              "label": {
+                "en": "Sotho, Southern"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/es",
+              "label": {
+                "en": "Spanish |  Castilian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/su",
+              "label": {
+                "en": "Sundanese"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/sw",
+              "label": {
+                "en": "Swahili"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ss",
+              "label": {
+                "en": "Swati"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/sv",
+              "label": {
+                "en": "Swedish"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/tl",
+              "label": {
+                "en": "Tagalog"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ty",
+              "label": {
+                "en": "Tahitian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/tg",
+              "label": {
+                "en": "Tajik"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ta",
+              "label": {
+                "en": "Tamil"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/tt",
+              "label": {
+                "en": "Tatar"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/te",
+              "label": {
+                "en": "Telugu"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/th",
+              "label": {
+                "en": "Thai"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/bo",
+              "label": {
+                "en": "Tibetan"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ti",
+              "label": {
+                "en": "Tigrinya"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/to",
+              "label": {
+                "en": "Tonga (Tonga Islands)"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ts",
+              "label": {
+                "en": "Tsonga"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/tn",
+              "label": {
+                "en": "Tswana"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/tr",
+              "label": {
+                "en": "Turkish"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/tk",
+              "label": {
+                "en": "Turkmen"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/tw",
+              "label": {
+                "en": "Twi"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ug",
+              "label": {
+                "en": "Uighur |  Uyghur"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/uk",
+              "label": {
+                "en": "Ukrainian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ur",
+              "label": {
+                "en": "Urdu"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/uz",
+              "label": {
+                "en": "Uzbek"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ve",
+              "label": {
+                "en": "Venda"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/vi",
+              "label": {
+                "en": "Vietnamese"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/vo",
+              "label": {
+                "en": "Volapük"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/wa",
+              "label": {
+                "en": "Walloon"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/cy",
+              "label": {
+                "en": "Welsh"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/fy",
+              "label": {
+                "en": "Western Frisian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/wo",
+              "label": {
+                "en": "Wolof"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/xh",
+              "label": {
+                "en": "Xhosa"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/yi",
+              "label": {
+                "en": "Yiddish"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/yo",
+              "label": {
+                "en": "Yoruba"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/za",
+              "label": {
+                "en": "Zhuang |  Chuang"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/zu",
+              "label": {
+                "en": "Zulu"
+              }
+            }
+          ],
+          "cardinality": {
+            "min": 0,
+            "pref": 1,
+            "max": 1
+          },
+          "description": {
+            "en": "This property refers to a language used in the textual metadata describing titles, descriptions, etc. of the Datasets in the Catalogue. This property can be repeated if the metadata is provided in multiple languages."
+          }
+        },
+        {
+          "type": "text",
+          "nodetype": "LITERAL",
+          "label": {
+            "en": "Modification date"
+          },
+          "description": {
+            "en": "This property contains the most recent date on which the Catalogue was changed or modified."
+          },
+          "cardinality": {
+            "min": 0,
+            "pref": 1,
+            "max": 1
+          },
+          "extends": "dcterms:modified"
+        },
+        {
+          "type": "text",
+          "nodetype": "LITERAL",
+          "extends": "foaf:homepage",
+          "description": {
+            "en": "This property refers to a web page that acts as the main page for the Catalogue."
+          },
+          "cardinality": {
+            "min": 0,
+            "pref": 1,
+            "max": 1
+          }
+        },
+        {
+          "type": "group",
+          "nodetype": "RESOURCE",
+          "extends": "odrs:RightsStatement-short",
+          "cardinality": {
+            "min": 0,
+            "pref": 0,
+            "max": 1
+          },
+          "property": "http://purl.org/dc/terms/rights",
+          "styles": [
+            "expandable"
+          ]
+        },
+        {
+          "type": "text",
+          "nodetype": "LITERAL",
+          "extends": "dcterms:spatial",
+          "description": {
+            "": "The geographical area covered by the catalogue. It is recommended to use URIs from Geonames in the form: http://sws.geonames.org/6695072"
+          }
+        },
+        {
+          "type": "group",
+          "nodetype": "RESOURCE",
+          "cardinality": {
+            "min": 0,
+            "pref": 1
+          },
+          "extends": "dcat:dcterms:license"
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "nodetype": "URI",
+      "id": "dcat:dcterms:license-restricted"
+    },
+    {
+      "type": "group",
+      "nodetype": "RESOURCE",
+      "id": "dcat:Catalog-validate",
+      "constraints": {
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/ns/dcat#Catalog"
+      },
+      "items": [
+        {
+          "type": "text",
+          "nodetype": "LITERAL",
+          "extends": "dcterms:title",
+          "cardinality": {
+            "min": 1,
+            "pref": 0
+          }
+        },
+        {
+          "type": "text",
+          "nodetype": "LITERAL",
+          "extends": "dcterms:description",
+          "cardinality": {
+            "min": 1,
+            "pref": 0
+          }
+        },
+        {
+          "type": "group",
+          "nodetype": "RESOURCE",
+          "extends": "foaf:Organization-ref",
+          "cardinality": {
+            "min": 1,
+            "pref": 0
+          },
+          "property": "http://purl.org/dc/terms/publisher",
+          "label": {
+            "en": "Publisher"
+          },
+          "description": {}
+        },
+        {
+          "type": "choice",
+          "nodetype": "RESOURCE",
+          "property": "http://www.w3.org/ns/dcat#dataset",
+          "label": {
+            "en": "Dataset"
+          },
+          "constraints": {
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/ns/dcat#Dataset"
+          },
+          "cardinality": {
+            "min": 1,
+            "pref": 0
+          }
+        },
+        {
+          "type": "text",
+          "nodetype": "LITERAL",
+          "extends": "dcterms:issued",
+          "cardinality": {
+            "min": 0,
+            "pref": 1,
+            "max": 1
+          }
+        },
+        {
+          "type": "choice",
+          "nodetype": "URI",
+          "extends": "dcat:dcterms:language",
+          "choices": [
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ab",
+              "label": {
+                "en": "Abkhazian"
+              }
+            },
+            {
+              "Value": "http://id.loc.gov/vocabulary/iso639-1/aa",
+              "label": {
+                "en": "Afar"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/af",
+              "label": {
+                "en": "Afrikaans"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ak",
+              "label": {
+                "en": "Akan"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/sq",
+              "label": {
+                "en": "Albanian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/am",
+              "label": {
+                "en": "Amharic"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ar",
+              "label": {
+                "en": "Arabic"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/an",
+              "label": {
+                "en": "Aragonese"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/hy",
+              "label": {
+                "en": "Armenian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/as",
+              "label": {
+                "en": "Assamese"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/av",
+              "label": {
+                "en": "Avaric"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ae",
+              "label": {
+                "en": "Avestan"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ay",
+              "label": {
+                "en": "Aymara"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/az",
+              "label": {
+                "en": "Azerbaijani"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/bm",
+              "label": {
+                "en": "Bambara"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ba",
+              "label": {
+                "en": "Bashkir"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/eu",
+              "label": {
+                "en": "Basque"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/be",
+              "label": {
+                "en": "Belarusian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/bn",
+              "label": {
+                "en": "Bengali"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/bh",
+              "label": {
+                "en": "Bihari languages"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/bi",
+              "label": {
+                "en": "Bislama"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/nb",
+              "label": {
+                "en": "Bokmål, Norwegian |  Norwegian Bokmål"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/bs",
+              "label": {
+                "en": "Bosnian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/br",
+              "label": {
+                "en": "Breton"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/bg",
+              "label": {
+                "en": "Bulgarian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/my",
+              "label": {
+                "en": "Burmese"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ca",
+              "label": {
+                "en": "Catalan |  Valencian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/km",
+              "label": {
+                "en": "Central Khmer"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ch",
+              "label": {
+                "en": "Chamorro"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ce",
+              "label": {
+                "en": "Chechen"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ny",
+              "label": {
+                "en": "Chichewa |  Chewa |  Nyanja"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/zh",
+              "label": {
+                "en": "Chinese"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/cu",
+              "label": {
+                "en": "Church Slavic |  Old Slavonic |  Church Slavonic |  Old Bulgarian |  Old Church Slavonic"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/cv",
+              "label": {
+                "en": "Chuvash"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/kw",
+              "label": {
+                "en": "Cornish"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/co",
+              "label": {
+                "en": "Corsican"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/cr",
+              "label": {
+                "en": "Cree"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/hr",
+              "label": {
+                "en": "Croatian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/cs",
+              "label": {
+                "en": "Czech"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/da",
+              "label": {
+                "en": "Danish"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/dv",
+              "label": {
+                "en": "Divehi |  Dhivehi |  Maldivian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/nl",
+              "label": {
+                "en": "Dutch |  Flemish"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/dz",
+              "label": {
+                "en": "Dzongkha"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/en",
+              "label": {
+                "en": "English"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/eo",
+              "label": {
+                "en": "Esperanto"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/et",
+              "label": {
+                "en": "Estonian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ee",
+              "label": {
+                "en": "Ewe"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/fo",
+              "label": {
+                "en": "Faroese"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/fj",
+              "label": {
+                "en": "Fijian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/fi",
+              "label": {
+                "en": "Finnish"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/fr",
+              "label": {
+                "en": "French"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ff",
+              "label": {
+                "en": "Fulah"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/gd",
+              "label": {
+                "en": "Gaelic |  Scottish Gaelic"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/gl",
+              "label": {
+                "en": "Galician"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/lg",
+              "label": {
+                "en": "Ganda"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ka",
+              "label": {
+                "en": "Georgian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/de",
+              "label": {
+                "en": "German"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/el",
+              "label": {
+                "en": "Greek, Modern (1453-)"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/gn",
+              "label": {
+                "en": "Guarani"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/gu",
+              "label": {
+                "en": "Gujarati"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ht",
+              "label": {
+                "en": "Haitian |  Haitian Creole"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ha",
+              "label": {
+                "en": "Hausa"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/he",
+              "label": {
+                "en": "Hebrew"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/hz",
+              "label": {
+                "en": "Herero"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/hi",
+              "label": {
+                "en": "Hindi"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ho",
+              "label": {
+                "en": "Hiri Motu"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/hu",
+              "label": {
+                "en": "Hungarian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/is",
+              "label": {
+                "en": "Icelandic"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/io",
+              "label": {
+                "en": "Ido"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ig",
+              "label": {
+                "en": "Igbo"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/id",
+              "label": {
+                "en": "Indonesian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ia",
+              "label": {
+                "en": "Interlingua (International Auxiliary Language Association)"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ie",
+              "label": {
+                "en": "Interlingue |  Occidental"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/iu",
+              "label": {
+                "en": "Inuktitut"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ik",
+              "label": {
+                "en": "Inupiaq"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ga",
+              "label": {
+                "en": "Irish"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/it",
+              "label": {
+                "en": "Italian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ja",
+              "label": {
+                "en": "Japanese"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/jv",
+              "label": {
+                "en": "Javanese"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/kl",
+              "label": {
+                "en": "Kalaallisut |  Greenlandic"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/kn",
+              "label": {
+                "en": "Kannada"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/kr",
+              "label": {
+                "en": "Kanuri"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ks",
+              "label": {
+                "en": "Kashmiri"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/kk",
+              "label": {
+                "en": "Kazakh"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ki",
+              "label": {
+                "en": "Kikuyu |  Gikuyu"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/rw",
+              "label": {
+                "en": "Kinyarwanda"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ky",
+              "label": {
+                "en": "Kirghiz |  Kyrgyz"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/kv",
+              "label": {
+                "en": "Komi"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/kg",
+              "label": {
+                "en": "Kongo"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ko",
+              "label": {
+                "en": "Korean"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/kj",
+              "label": {
+                "en": "Kuanyama |  Kwanyama"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ku",
+              "label": {
+                "en": "Kurdish"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/lo",
+              "label": {
+                "en": "Lao"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/la",
+              "label": {
+                "en": "Latin"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/lv",
+              "label": {
+                "en": "Latvian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/li",
+              "label": {
+                "en": "Limburgan |  Limburger |  Limburgish"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ln",
+              "label": {
+                "en": "Lingala"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/lt",
+              "label": {
+                "en": "Lithuanian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/lu",
+              "label": {
+                "en": "Luba-Katanga"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/lb",
+              "label": {
+                "en": "Luxembourgish |  Letzeburgesch"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/mk",
+              "label": {
+                "en": "Macedonian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/mg",
+              "label": {
+                "en": "Malagasy"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ms",
+              "label": {
+                "en": "Malay"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ml",
+              "label": {
+                "en": "Malayalam"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/mt",
+              "label": {
+                "en": "Maltese"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/gv",
+              "label": {
+                "en": "Manx"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/mi",
+              "label": {
+                "en": "Maori"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/mr",
+              "label": {
+                "en": "Marathi"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/mh",
+              "label": {
+                "en": "Marshallese"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/mn",
+              "label": {
+                "en": "Mongolian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/na",
+              "label": {
+                "en": "Nauru"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/nv",
+              "label": {
+                "en": "Navajo |  Navaho"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/nd",
+              "label": {
+                "en": "Ndebele, North |  North Ndebele"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/nr",
+              "label": {
+                "en": "Ndebele, South |  South Ndebele"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ng",
+              "label": {
+                "en": "Ndonga"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ne",
+              "label": {
+                "en": "Nepali"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/se",
+              "label": {
+                "en": "Northern Sami"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/no",
+              "label": {
+                "en": "Norwegian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/nn",
+              "label": {
+                "en": "Norwegian Nynorsk |  Nynorsk, Norwegian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/oc",
+              "label": {
+                "en": "Occitan (post 1500)"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/oj",
+              "label": {
+                "en": "Ojibwa"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/or",
+              "label": {
+                "en": "Oriya"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/om",
+              "label": {
+                "en": "Oromo"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/os",
+              "label": {
+                "en": "Ossetian |  Ossetic"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/pi",
+              "label": {
+                "en": "Pali"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/pa",
+              "label": {
+                "en": "Panjabi |  Punjabi"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/fa",
+              "label": {
+                "en": "Persian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/pl",
+              "label": {
+                "en": "Polish"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/pt",
+              "label": {
+                "en": "Portuguese"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ps",
+              "label": {
+                "en": "Pushto |  Pashto"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/qu",
+              "label": {
+                "en": "Quechua"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ro",
+              "label": {
+                "en": "Romanian |  Moldavian |  Moldovan"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/rm",
+              "label": {
+                "en": "Romansh"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/rn",
+              "label": {
+                "en": "Rundi"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ru",
+              "label": {
+                "en": "Russian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/sm",
+              "label": {
+                "en": "Samoan"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/sg",
+              "label": {
+                "en": "Sango"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/sa",
+              "label": {
+                "en": "Sanskrit"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/sc",
+              "label": {
+                "en": "Sardinian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/sr",
+              "label": {
+                "en": "Serbian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/sn",
+              "label": {
+                "en": "Shona"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ii",
+              "label": {
+                "en": "Sichuan Yi |  Nuosu"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/sd",
+              "label": {
+                "en": "Sindhi"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/si",
+              "label": {
+                "en": "Sinhala |  Sinhalese"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/sk",
+              "label": {
+                "en": "Slovak"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/sl",
+              "label": {
+                "en": "Slovenian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/so",
+              "label": {
+                "en": "Somali"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/st",
+              "label": {
+                "en": "Sotho, Southern"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/es",
+              "label": {
+                "en": "Spanish |  Castilian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/su",
+              "label": {
+                "en": "Sundanese"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/sw",
+              "label": {
+                "en": "Swahili"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ss",
+              "label": {
+                "en": "Swati"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/sv",
+              "label": {
+                "en": "Swedish"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/tl",
+              "label": {
+                "en": "Tagalog"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ty",
+              "label": {
+                "en": "Tahitian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/tg",
+              "label": {
+                "en": "Tajik"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ta",
+              "label": {
+                "en": "Tamil"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/tt",
+              "label": {
+                "en": "Tatar"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/te",
+              "label": {
+                "en": "Telugu"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/th",
+              "label": {
+                "en": "Thai"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/bo",
+              "label": {
+                "en": "Tibetan"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ti",
+              "label": {
+                "en": "Tigrinya"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/to",
+              "label": {
+                "en": "Tonga (Tonga Islands)"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ts",
+              "label": {
+                "en": "Tsonga"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/tn",
+              "label": {
+                "en": "Tswana"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/tr",
+              "label": {
+                "en": "Turkish"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/tk",
+              "label": {
+                "en": "Turkmen"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/tw",
+              "label": {
+                "en": "Twi"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ug",
+              "label": {
+                "en": "Uighur |  Uyghur"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/uk",
+              "label": {
+                "en": "Ukrainian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ur",
+              "label": {
+                "en": "Urdu"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/uz",
+              "label": {
+                "en": "Uzbek"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/ve",
+              "label": {
+                "en": "Venda"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/vi",
+              "label": {
+                "en": "Vietnamese"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/vo",
+              "label": {
+                "en": "Volapük"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/wa",
+              "label": {
+                "en": "Walloon"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/cy",
+              "label": {
+                "en": "Welsh"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/fy",
+              "label": {
+                "en": "Western Frisian"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/wo",
+              "label": {
+                "en": "Wolof"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/xh",
+              "label": {
+                "en": "Xhosa"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/yi",
+              "label": {
+                "en": "Yiddish"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/yo",
+              "label": {
+                "en": "Yoruba"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/za",
+              "label": {
+                "en": "Zhuang |  Chuang"
+              }
+            },
+            {
+              "value": "http://id.loc.gov/vocabulary/iso639-1/zu",
+              "label": {
+                "en": "Zulu"
+              }
+            }
+          ],
+          "cardinality": {
+            "min": 0,
+            "pref": 1,
+            "max": 1
+          },
+          "description": {}
+        },
+        {
+          "type": "text",
+          "nodetype": "LITERAL",
+          "label": {},
+          "description": {},
+          "cardinality": {
+            "min": 0,
+            "pref": 1,
+            "max": 1
+          },
+          "extends": "dcterms:modified"
+        },
+        {
+          "type": "text",
+          "nodetype": "LITERAL",
+          "extends": "foaf:homepage",
+          "description": {},
+          "cardinality": {
+            "min": 0,
+            "pref": 1,
+            "max": 1
+          }
+        },
+        {
+          "type": "group",
+          "nodetype": "RESOURCE",
+          "extends": "odrs:RightsStatement",
+          "cardinality": {
+            "min": 0,
+            "pref": 0
+          },
+          "property": "http://purl.org/dc/terms/rights"
+        },
+        {
+          "type": "text",
+          "nodetype": "LITERAL",
+          "extends": "dcterms:spatial",
+          "description": {}
+        },
+        {
+          "type": "group",
+          "nodetype": "RESOURCE",
+          "extends": "dcterms:license",
+          "cardinality": {
+            "min": 0,
+            "pref": 1
+          }
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "nodetype": "RESOURCE",
+      "id": "dcat:foaf:Agent",
+      "property": "http://purl.org/dc/terms/publisher",
+      "items": [
+        {
+          "type": "text",
+          "nodetype": "LITERAL",
+          "extends": "foaf:name",
+          "cardinality": {
+            "min": 1,
+            "pref": 0
+          }
+        },
+        {
+          "type": "choice",
+          "nodetype": "URI",
+          "property": "http://purl.org/dc/terms/type",
+          "label": {
+            "en": "Type"
+          },
+          "choices": [
+            {
+              "value": "http://purl.org/adms/publishertype/Academia-ScientificOrganisation",
+              "label": {
+                "en": "Academia/Scientific organisation"
+              }
+            },
+            {
+              "value": "http://purl.org/adms/publishertype/Company",
+              "label": {
+                "en": "Company"
+              }
+            },
+            {
+              "value": "http://purl.org/adms/publishertype/IndustryConsortium",
+              "label": {
+                "en": "Industry consortium"
+              }
+            },
+            {
+              "value": "http://purl.org/adms/publishertype/LocalAuthority",
+              "label": {
+                "en": "Local Authority"
+              }
+            },
+            {
+              "value": "http://purl.org/adms/publishertype/NationalAuthority",
+              "label": {
+                "en": "National authority"
+              }
+            },
+            {
+              "value": "http://purl.org/adms/publishertype/NonGovernmentalOrganisation",
+              "label": {
+                "en": "Non-Governmental Organisation"
+              }
+            },
+            {
+              "value": "http://purl.org/adms/publishertype/NonProfitOrganisation",
+              "label": {
+                "en": "Non-Profit Organisation"
+              }
+            },
+            {
+              "value": "http://purl.org/adms/publishertype/PrivateIndividual(s)",
+              "label": {
+                "en": "Private Individual(s)"
+              }
+            },
+            {
+              "value": "http://purl.org/adms/publishertype/RegionalAuthority",
+              "label": {
+                "en": "Regional authority"
+              }
+            },
+            {
+              "value": "http://purl.org/adms/publishertype/StandardisationBody",
+              "label": {
+                "en": "Standardisation body"
+              }
+            },
+            {
+              "value": "http://purl.org/adms/publishertype/SupraNationalAuthority",
+              "label": {
+                "en": "Supra-national authority"
+              }
+            }
+          ],
+          "cardinality": {
+            "min": 0,
+            "pref": 1,
+            "max": 1
+          }
+        },
+        {
+          "type": "text",
+          "nodetype": "LITERAL",
+          "extends": "foaf:homepage",
+          "cardinality": {
+            "min": 0,
+            "pref": 0
+          }
+        },
+        {
+          "type": "text",
+          "nodetype": "URI",
+          "extends": "foaf:mbox",
+          "valueTemplate": "mailto:",
+          "cardinality": {
+            "min": 0,
+            "pref": 0
+          }
+        }
+      ],
+      "constraints": {
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://xmlns.com/foaf/0.1/Agent"
+      }
+    },
+    {
+      "type": "group",
+      "nodetype": "RESOURCE",
+      "id": "dcat:dcterms:license",
+      "items": [
+        {
+          "type": "choice",
+          "nodetype": "URI",
+          "extends": "dcterms:cc-license-choices",
+          "label": {
+            "en": "Creative Commons"
+          },
+          "choices": [
+            {
+              "value": "http://creativecommons.org/licenses/by/3.0/",
+              "label": {
+                "en": "CC BY 3.0 (Attribution)"
+              },
+              "description": {
+                "de": "Der Urheber gestattet die Ressource für kommerzielle Zwecke zu nutzen und Änderungen vorzunehmen",
+                "sl": "Lastnik DOVOLJUJE komercialno rabo in spreminjanje vira.",
+                "ro": "Autorul PERMITE utilizarea in scop comercial SI modificari asupra resursei",
+                "el": "Άδεια που εφαρμόζεται στο αντικείμενο (αναφορικά με Creative Commons)",
+                "hu": "A tulajdonos engedélyezi a kereskedelmi forgalomba hozatalt és a változásokat",
+                "bg": "Притежателят ПОЗВОЛЯВА търговска употреба и промени в ресурса ",
+                "fr": "Le détenteur des droits AUTORISE l'utilisation commerciale ET les modifications de la ressource",
+                "en": "The owner ALLOWS commercial uses AND changes to the resource",
+                "ru": "Владелец РАЗРЕШАЕТ как использование источника в коммерческих целях, ТАК И изменение содержания",
+                "hi": "स्वामी वाणिज्यिक उपयोग एवं संसाधनों में परिवर्तन की अनुमति देता है",
+                "et": "Omanik LUBAB kasutada allikat kommertslikel eesmärkidel JA muuta allika sisu",
+                "es": "El propieatrio PERMITE uso comercial Y cambios en el recurso"
+              }
+            },
+            {
+              "value": "http://creativecommons.org/licenses/by-nc/3.0/",
+              "label": {
+                "en": "CC BY-NC 3.0 (Attribution, Non-Commercial)"
+              },
+              "description": {
+                "de": "Der Urheber gestattet keine kommerzielle Nutzung, erlaubt aber Änderungen an der Ressource",
+                "sl": "Lastnik NE dovoljuje komercialne rabe toda DOVOLJUJE spreminjanje vira.",
+                "ro": "Autorul NU permite utilizarea in scop comercial dar PERMITE modificari asupra resursei",
+                "el": "Ο ιδιοκτήτης του αντικειμένου ΔΕΝ επιτρέπει εμπορικές χρήσεις αλλά ΕΠΙΤΡΕΠΕΙ αλλαγές στο αντικείμενο",
+                "hu": "A tulajdonos nem engedélyezi a kereskedelmi forgalomba hozatalt, de a módosítást igen. ",
+                "bg": "Притежателят НЕ ПОЗВОЛЯВА за търговски цели, но ПОЗВОЛЯВА да се променя ресурса",
+                "fr": "Le détenteur des droits N'AUTORISE PAS l'utilisation commerciale MAIS ACCEPTE les modifications de la ressource",
+                "en": "The owner does NOT allow commercial uses but ALLOWS changes to the resource",
+                "ru": "Владелец НЕ РАЗРЕШАЕТ использование источника в коммерческих целях, но РАЗРЕШАЕТ изменение содержания",
+                "hi": "स्वामी वाणिज्यिक उपयोग की अनुमति नही देता है परंतु संसाधनों में परिवर्तन की अनुमति देता है",
+                "et": "Omanik EI LUBA kasutada allikat kommertslikel eesmärkidel, kuid LUBAB muuta allika sisu",
+                "es": "El propieatrio NO permite uso comercial pero PERMITE cambios en el recurso"
+              }
+            },
+            {
+              "value": "http://creativecommons.org/licenses/by-nc-nd/3.0/",
+              "label": {
+                "en": "CC BY-NC-ND 3.0 (Attribution, Non-Commercial, No Derivative Works)"
+              },
+              "description": {
+                "de": "Der Urheber gestattet die nicht-kommerzielle Nutzung oder Änderungen an der Ressourcen",
+                "sl": "Lastnik NE dovoljuje komercialne rabe ALI spreminjanja virov.",
+                "ro": "Autorul NU permite nici utilizarea in scop comercial nici modificari asupra resursei",
+                "el": "Ο ιδιοκτήτης του αντικειμένου ΕΠΙΤΡΕΠΕΙ εμπορικές χρήσεις αλλά ΌΧΙ αλλαγές στο αντικείμενο",
+                "hu": "A tulajdonos nem engedélyezi a kereskedelmi forgalomba hozatalt és módosítást. ",
+                "bg": "Притежателят НЕ позволява търговска употреба и ИЛИ да се променя ресурса ",
+                "fr": "Le détenteur des droits N'AUTORISE PAS l'utilisation commerciale NI les modifications de la ressource",
+                "en": "The owner does NOT allow commercial uses OR changes to the resource",
+                "ru": "Владелец НЕ РАЗРЕШАЕТ как использование источника в коммерческих целях, ТАК И изменение содержания",
+                "hi": "स्वामी वाणिज्यिक उपयोग और संसाधनों में परिवर्तन की अनुमति नहीं  देता है",
+                "et": "Omanik EI LUBA kasutada allikat kommertslikel eesmärkidel EGA luba muuta allika sisu",
+                "es": "El propieatrio NO permite uso comercial ni cambios en el recurso"
+              }
+            },
+            {
+              "value": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+              "label": {
+                "en": "CC BY-NC-SA 3.0 (Attribution, Non-Commercial, Share Alike)"
+              }
+            },
+            {
+              "value": "http://creativecommons.org/licenses/by-nd/3.0/",
+              "label": {
+                "en": "CC BY-ND 3.0 (Attribution, No Derivative Works)"
+              },
+              "description": {
+                "de": "Der Urheber gestattet, die Ressource für kommerzielle Zwecke zu nutzen, es dürfen jedoch keine Änderungen vorgenommen werden",
+                "sl": "Lastnik DOVOLJUJE komercialno rabo toda NE dovoli spreminjanja vira.",
+                "ro": "Autorul PERMITE utilizarea in scop comercial dar nu permite modificari asupra resursei",
+                "el": "Ο ιδιοκτήτης του αντικειμένου ΕΠΙΤΡΕΠΕΙ εμπορικές χρήσεις ΚΑΙ αλλαγές στο αντικείμενο",
+                "hu": "A tulajdonos engedélyezi a kereskedelmi forgalomba hozatalt, változások nélkül.",
+                "bg": "Притежателят ПОЗВОЛЯВА търговска употреба, но НЕ се позволява да се променя ресурса",
+                "fr": "Le détenteur des droits AUTORISE l'utilisation commerciale MAIS REFUSE les modifications de la ressource",
+                "en": "The owner ALLOWS commercial uses but does NOT allow changes to the resource",
+                "ru": "Владелец РАЗРЕШАЕТ использование источника в коммерческих целях, но НЕ РАЗРЕШАЕТ изменение содержания",
+                "hi": "स्वामी वाणिज्यिक उपयोग की अनुमति देता है परंतु  संसाधनों में परिवर्तन की अनुमति नहीं  देता है",
+                "et": "Omanik LUBAB kasutada allikat kommertslikel eesmärkidel, kuid EI luba muuta allika sisu",
+                "es": "El propieatrio PERMITE uso comercial pero NO permite cambios en el recurso"
+              }
+            },
+            {
+              "value": "http://creativecommons.org/licenses/by-sa/3.0/",
+              "label": {
+                "en": "CC BY-SA 3.0 (Attribution, Share Alike)"
+              }
+            },
+            {
+              "value": "http://creativecommons.org/publicdomain/zero/1.0/",
+              "label": {
+                "en": "CC0 1.0 (Public Domain Dedication, No Copyright)"
+              }
+            }
+          ],
+          "property": "http://purl.org/dc/terms/license",
+          "description": {},
+          "cardinality": {
+            "min": 0,
+            "pref": 1
+          }
+        },
+        {
+          "type": "text",
+          "nodetype": "URI",
+          "property": "http://purl.org/dc/terms/license",
+          "label": {
+            "en": "Other"
+          },
+          "cardinality": {
+            "min": 0,
+            "pref": 1
+          }
+        }
+      ],
+      "label": {
+        "en": "License"
+      }
+    }
+  ]
+}
