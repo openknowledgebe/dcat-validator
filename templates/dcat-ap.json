@@ -353,20 +353,6 @@
       },
       "choices": [
         {
-          "value": "http://publications.europa.eu/resource/authority/language/VLS",
-          "label": {
-            "en": "Flemish",
-            "sv": "Flamländska"
-          }
-        },
-        {
-          "value": "http://publications.europa.eu/resource/authority/language/OP_DATPRO",
-          "label": {
-            "en": "Provisional data",
-            "sv": "Tillfälliga uppgifter"
-          }
-        },
-        {
           "value": "http://publications.europa.eu/resource/authority/language/SQI",
           "label": {
             "en": "Albanian",
@@ -402,6 +388,13 @@
           }
         },
         {
+          "value": "http://publications.europa.eu/resource/authority/language/BEL",
+          "label": {
+            "en": "Belarusian",
+            "sv": "vitryska"
+          }
+        },
+        {
           "value": "http://publications.europa.eu/resource/authority/language/BEN",
           "label": {
             "en": "Bengali",
@@ -430,6 +423,41 @@
           }
         },
         {
+          "value": "http://publications.europa.eu/resource/authority/language/CAT",
+          "label": {
+            "en": "Catalan",
+            "sv": "katalanska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/ZHO",
+          "label": {
+            "en": "Chinese",
+            "sv": "kinesiska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/COS",
+          "label": {
+            "en": "Corsican",
+            "sv": "korsikanska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/HRV",
+          "label": {
+            "en": "Croatian",
+            "sv": "kroatiska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/CES",
+          "label": {
+            "en": "Czech",
+            "sv": "tjeckiska"
+          }
+        },
+        {
           "value": "http://publications.europa.eu/resource/authority/language/DAN",
           "label": {
             "en": "Danish",
@@ -441,6 +469,13 @@
           "label": {
             "en": "Dhivehi",
             "sv": "divehi"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/NLD",
+          "label": {
+            "en": "Dutch",
+            "sv": "nederländska"
           }
         },
         {
@@ -465,10 +500,24 @@
           }
         },
         {
+          "value": "http://publications.europa.eu/resource/authority/language/FAO",
+          "label": {
+            "en": "Faroese",
+            "sv": "färöiska"
+          }
+        },
+        {
           "value": "http://publications.europa.eu/resource/authority/language/FIN",
           "label": {
             "en": "Finnish",
             "sv": "finska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/VLS",
+          "label": {
+            "en": "Flemish",
+            "sv": "Flamländska"
           }
         },
         {
@@ -486,13 +535,6 @@
           }
         },
         {
-          "value": "http://publications.europa.eu/resource/authority/language/FAO",
-          "label": {
-            "en": "Faroese",
-            "sv": "färöiska"
-          }
-        },
-        {
           "value": "http://publications.europa.eu/resource/authority/language/GLG",
           "label": {
             "en": "Galician",
@@ -504,6 +546,13 @@
           "label": {
             "en": "Georgian",
             "sv": "georgiska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/DEU",
+          "label": {
+            "en": "German",
+            "sv": "tyska"
           }
         },
         {
@@ -535,6 +584,20 @@
           }
         },
         {
+          "value": "http://publications.europa.eu/resource/authority/language/HUN",
+          "label": {
+            "en": "Hungarian",
+            "sv": "ungerska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/ISL",
+          "label": {
+            "en": "Icelandic",
+            "sv": "isländska"
+          }
+        },
+        {
           "value": "http://publications.europa.eu/resource/authority/language/IND",
           "label": {
             "en": "Indonesian",
@@ -556,13 +619,6 @@
           }
         },
         {
-          "value": "http://publications.europa.eu/resource/authority/language/ISL",
-          "label": {
-            "en": "Icelandic",
-            "sv": "isländska"
-          }
-        },
-        {
           "value": "http://publications.europa.eu/resource/authority/language/ITA",
           "label": {
             "en": "Italian",
@@ -577,24 +633,10 @@
           }
         },
         {
-          "value": "http://publications.europa.eu/resource/authority/language/YID",
-          "label": {
-            "en": "Yiddish",
-            "sv": "jiddisch"
-          }
-        },
-        {
           "value": "http://publications.europa.eu/resource/authority/language/CSB",
           "label": {
             "en": "Kashubian",
             "sv": "kasjubiska"
-          }
-        },
-        {
-          "value": "http://publications.europa.eu/resource/authority/language/CAT",
-          "label": {
-            "en": "Catalan",
-            "sv": "katalanska"
           }
         },
         {
@@ -612,38 +654,10 @@
           }
         },
         {
-          "value": "http://publications.europa.eu/resource/authority/language/ZHO",
-          "label": {
-            "en": "Chinese",
-            "sv": "kinesiska"
-          }
-        },
-        {
-          "value": "http://publications.europa.eu/resource/authority/language/KIR",
-          "label": {
-            "en": "Kyrgyz",
-            "sv": "kirgiziska"
-          }
-        },
-        {
           "value": "http://publications.europa.eu/resource/authority/language/KOR",
           "label": {
             "en": "Korean",
             "sv": "koreanska"
-          }
-        },
-        {
-          "value": "http://publications.europa.eu/resource/authority/language/COS",
-          "label": {
-            "en": "Corsican",
-            "sv": "korsikanska"
-          }
-        },
-        {
-          "value": "http://publications.europa.eu/resource/authority/language/HRV",
-          "label": {
-            "en": "Croatian",
-            "sv": "kroatiska"
           }
         },
         {
@@ -654,10 +668,10 @@
           }
         },
         {
-          "value": "http://publications.europa.eu/resource/authority/language/CYM",
+          "value": "http://publications.europa.eu/resource/authority/language/KIR",
           "label": {
-            "en": "Welsh",
-            "sv": "kymriska"
+            "en": "Kyrgyz",
+            "sv": "kirgiziska"
           }
         },
         {
@@ -752,13 +766,6 @@
           }
         },
         {
-          "value": "http://publications.europa.eu/resource/authority/language/NLD",
-          "label": {
-            "en": "Dutch",
-            "sv": "nederländska"
-          }
-        },
-        {
           "value": "http://publications.europa.eu/resource/authority/language/NEP",
           "label": {
             "en": "Nepali",
@@ -815,6 +822,13 @@
           }
         },
         {
+          "value": "http://publications.europa.eu/resource/authority/language/OP_DATPRO",
+          "label": {
+            "en": "Provisional data",
+            "sv": "Tillfälliga uppgifter"
+          }
+        },
+        {
           "value": "http://publications.europa.eu/resource/authority/language/ROM",
           "label": {
             "en": "Romani",
@@ -829,6 +843,13 @@
           }
         },
         {
+          "value": "http://publications.europa.eu/resource/authority/language/ROH",
+          "label": {
+            "en": "Romansh",
+            "sv": "rätoromanska"
+          }
+        },
+        {
           "value": "http://publications.europa.eu/resource/authority/language/RUS",
           "label": {
             "en": "Russian",
@@ -836,10 +857,10 @@
           }
         },
         {
-          "value": "http://publications.europa.eu/resource/authority/language/ROH",
+          "value": "http://publications.europa.eu/resource/authority/language/GLA",
           "label": {
-            "en": "Romansh",
-            "sv": "rätoromanska"
+            "en": "Scottish Gaelic",
+            "sv": "skotsk gaeliska"
           }
         },
         {
@@ -864,13 +885,6 @@
           }
         },
         {
-          "value": "http://publications.europa.eu/resource/authority/language/GLA",
-          "label": {
-            "en": "Scottish Gaelic",
-            "sv": "skotsk gaeliska"
-          }
-        },
-        {
           "value": "http://publications.europa.eu/resource/authority/language/SLK",
           "label": {
             "en": "Slovak",
@@ -892,17 +906,17 @@
           }
         },
         {
-          "value": "http://publications.europa.eu/resource/authority/language/SWE",
-          "label": {
-            "en": "Swedish",
-            "sv": "svenska"
-          }
-        },
-        {
           "value": "http://publications.europa.eu/resource/authority/language/SWA",
           "label": {
             "en": "Swahili",
             "sv": "swahili"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/SWE",
+          "label": {
+            "en": "Swedish",
+            "sv": "svenska"
           }
         },
         {
@@ -934,13 +948,6 @@
           }
         },
         {
-          "value": "http://publications.europa.eu/resource/authority/language/CES",
-          "label": {
-            "en": "Czech",
-            "sv": "tjeckiska"
-          }
-        },
-        {
           "value": "http://publications.europa.eu/resource/authority/language/TUR",
           "label": {
             "en": "Turkish",
@@ -955,24 +962,10 @@
           }
         },
         {
-          "value": "http://publications.europa.eu/resource/authority/language/DEU",
-          "label": {
-            "en": "German",
-            "sv": "tyska"
-          }
-        },
-        {
           "value": "http://publications.europa.eu/resource/authority/language/UKR",
           "label": {
             "en": "Ukrainian",
             "sv": "ukrainska"
-          }
-        },
-        {
-          "value": "http://publications.europa.eu/resource/authority/language/HUN",
-          "label": {
-            "en": "Hungarian",
-            "sv": "ungerska"
           }
         },
         {
@@ -997,13 +990,6 @@
           }
         },
         {
-          "value": "http://publications.europa.eu/resource/authority/language/WLN",
-          "label": {
-            "en": "Walloon",
-            "sv": "vallonska"
-          }
-        },
-        {
           "value": "http://publications.europa.eu/resource/authority/language/VIE",
           "label": {
             "en": "Vietnamese",
@@ -1011,10 +997,24 @@
           }
         },
         {
-          "value": "http://publications.europa.eu/resource/authority/language/BEL",
+          "value": "http://publications.europa.eu/resource/authority/language/WLN",
           "label": {
-            "en": "Belarusian",
-            "sv": "vitryska"
+            "en": "Walloon",
+            "sv": "vallonska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/CYM",
+          "label": {
+            "en": "Welsh",
+            "sv": "kymriska"
+          }
+        },
+        {
+          "value": "http://publications.europa.eu/resource/authority/language/YID",
+          "label": {
+            "en": "Yiddish",
+            "sv": "jiddisch"
           }
         },
         {
@@ -1753,13 +1753,6 @@
       },
       "choices": [
         {
-          "value": "http://purl.org/adms/status/Deprecated",
-          "label": {
-            "en": "Deprecated",
-            "sv": "Avvecklad"
-          }
-        },
-        {
           "value": "http://purl.org/adms/status/Completed",
           "label": {
             "en": "Completed",
@@ -1768,10 +1761,10 @@
           "description": null
         },
         {
-          "value": "http://purl.org/adms/status/Withdrawn",
+          "value": "http://purl.org/adms/status/Deprecated",
           "label": {
-            "en": "Withdrawn",
-            "sv": "Tillbakadragen"
+            "en": "Deprecated",
+            "sv": "Avvecklad"
           }
         },
         {
@@ -1779,6 +1772,13 @@
           "label": {
             "en": "Under development",
             "": "Under utveckling"
+          }
+        },
+        {
+          "value": "http://purl.org/adms/status/Withdrawn",
+          "label": {
+            "en": "Withdrawn",
+            "sv": "Tillbakadragen"
           }
         }
       ]
@@ -1793,7 +1793,7 @@
       "items": [
         {
           "type": "text",
-          "nodetype": "LITERAL",
+          "nodetype": "LANGUAGE_LITERAL",
           "extends": "dcterms:title",
           "cardinality": {
             "min": 1,
@@ -1802,7 +1802,7 @@
         },
         {
           "type": "text",
-          "nodetype": "LITERAL",
+          "nodetype": "LANGUAGE_LITERAL",
           "extends": "dcterms:description",
           "cardinality": {
             "min": 1,
@@ -4290,26 +4290,12 @@
               }
             },
             {
-              "value": "http://purl.org/adms/publishertype/NonProfitOrganisation",
-              "label": {
-                "en": "Non-Profit Organisation",
-                "sv": "Ej vinstdrivande organisation"
-              }
-            },
-            {
               "value": "http://purl.org/adms/publishertype/Company",
               "label": {
                 "en": "Company",
                 "sv": "Företag"
               },
               "description": null
-            },
-            {
-              "value": "http://purl.org/adms/publishertype/NonGovernmentalOrganisation",
-              "label": {
-                "en": "Non-Governmental Organisation",
-                "sv": "Icke-statlig organisation"
-              }
             },
             {
               "value": "http://purl.org/adms/publishertype/IndustryConsortium",
@@ -4333,6 +4319,20 @@
                 "sv": "Nationell myndighet"
               },
               "description": null
+            },
+            {
+              "value": "http://purl.org/adms/publishertype/NonGovernmentalOrganisation",
+              "label": {
+                "en": "Non-Governmental Organisation",
+                "sv": "Icke-statlig organisation"
+              }
+            },
+            {
+              "value": "http://purl.org/adms/publishertype/NonProfitOrganisation",
+              "label": {
+                "en": "Non-Profit Organisation",
+                "sv": "Ej vinstdrivande organisation"
+              }
             },
             {
               "value": "http://purl.org/adms/publishertype/PrivateIndividual(s)",
