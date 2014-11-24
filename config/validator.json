@@ -21,5 +21,8 @@
         "http://www.w3.org/ns/dcat#Dataset": "dcat:Dataset",
         "http://www.w3.org/ns/dcat#Distribution": "dcat:Distribution"
     },
-    "mandatoryTypes": ["http://www.w3.org/ns/dcat#Catalog"]
+    "mandatoryTypes": ["http://www.w3.org/ns/dcat#Catalog"],
+    "aboutButton": "Om DCAT-AP validatorn",
+    "aboutTitle": "Om DCAT-AP validatorn",
+    "aboutText": "<p>Denna DCAT-AP validator har tagits fram för att validera DCAT-AP-baserade datasetbeskrivningar. Validatorn säkerställer att dessa beskrivningar uppfyller kraven från <a href=\"http://oppnadata.se\" target=\"_blank\">öppnadata.se</a>.</p><p>Validatorn är licensierad med LGPLv3 och har tagits fram av <a href=\"http://www.metasolutions.se\" target=\"_blank\">MetaSolutions</a>. Källkoden kan hämtas från <a href=\"https://bitbucket.org/metasolutions/dcat-editor/\" target=\"_blank\">ett Git-repository</a>.</p><p>Kontakta oss på <a href=\"mailto:info@metasolutions.se\" target=\"_blank\">info@metasolutions.se</a> om du vill veta mer om våra utbildningar eller om du är intresserad av <a href=\"http://lodify.com\" target=\"_blank\">LODify, vår molntjänst för publicering av länkade (öppna) data</a>.</p>"
 }
